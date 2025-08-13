@@ -1,0 +1,32 @@
+name: Basic Commands
+
+on:
+  push:
+    branches:
+      - main
+      - newA
+  schedule:
+    - cron: "*/1 * * * *" # Every day at midnight UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show current working directory
+        run: pwd
+      - run: ls -la
+
+      - name: Print today's date
+        run: date
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show current working directory
+        run: pwd
+      - run: ls -la
+
+      - name: Print today's date
+        run: date
