@@ -5,8 +5,7 @@ on:
     branches:
       - main
       - newA
-  schedule:
-    - cron: "0 0 */30 * *" # Every day at midnight UTC
+  
 
 jobs:
   build:
